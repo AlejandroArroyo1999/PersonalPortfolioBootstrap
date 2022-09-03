@@ -31,13 +31,13 @@ a:hover {
   padding: 20px;
 }
 
+.text {
+  width: 40%;
+}
+
 #profile-pic {
   border-radius: 50%;
   width: 250px;
-}
-
-.text {
-  width: 40%;
 }
 
 section {
@@ -47,20 +47,27 @@ section {
   margin-right: auto;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 section:nth-of-type(even) {
   background-color: rgba(255, 255, 255, 0.1);
-  color: black;
 }
 
-section:nth-of-type(even) * {
+section * {
   background-color: transparent;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   #navbar {
     display: none;
+  }
+
+  section {
+    flex-direction: column;
+    width: 100%;
+  }
+  .text {
+    width: 100%;
   }
 }
