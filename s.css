@@ -2,6 +2,7 @@ body {
   font-family: Courier New;
   background-color: black;
   color: white;
+  overflow: hidden;
   height: 100vh;
 }
 
@@ -26,10 +27,8 @@ body {
 }
 
 section {
-  height: 100%;
-  display: none;
+  height: 100vh; 
 }
-
 
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -53,3 +52,4 @@ section {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
