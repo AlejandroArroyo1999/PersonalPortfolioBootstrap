@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alejandro Arroyo</title>
+        <meta name="description" content="Alejandro's Personal Portfolio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="image.png" type="image/x-icon">
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <!--Main page section-->
+        <div class="d-flex justify-content-evenly align-items-center container-fluid" style="position: relative;" id="page">
+            <!--Navegation offcanvas sidebar-->
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" style="position: absolute; top: 10px; right: 10px; width: 75px;">
+                <img class="img-fluid float-start rounded-circle" src="image.png"alt="logo">
+            </button>
+
+            <div class="offcanvas offcanvas-end" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                    <img class="img-fluid rounded-circle" src="image.png" alt="logo" style="width: 75px; margin-right: 10px;">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a class="nav-link" href="#welcome">Welcome</a></li>
+                        <li class="list-group-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="list-group-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="list-group-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="list-group-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--Welcome section-->
+            <section class="justify-content-evenly align-items-center" id="welcome">
+                <h1 class="typewriter">I'm <a href="#about" class="btn btn-light" style="font-size: 32pt;">Alejandro</a></h1>
+            </section>
+            <!--About section-->
+            <section class="justify-content-evenly align-items-center" id="about">
+                <div id="text">
+                    <h3 style="margin: 3vw">I'm a <span id="roles" class="btn btn-light" style="font-size: 22pt;">software engineer</span></h3>
+                    <p style="margin: 3vw">Electric engineer, on my way to becoming a fully fledged Software Engineer, passionate about solving computer science problems. Interested in AI, machine-learning and full-stack web and app development.</p>
+                </div>
+                <div id="profile-picture">
+                    <img class="img-fluid rounded-circle" alt="Profile picture" src="cara.JPG">
+                </div>
+            </section>
+            <!--Projects Section-->
+            <section class="justify-content-evenly align-items-center flex-column" id="projects">
+                <h1 style="margin: 50px">Projects</h1>
+                <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active d-flex justify-content-evenly align-items-center">
+                            <div class="card" style="width: 18rem;">
+                                <img src="quoteApp.png" class="card-img-top" alt="Random quote generator">
+                                <div class="card-body" style="color: gray">
+                                    <h5 class="card-title">Random quote generator</h5>
+                                    <a href="https://alejandroarroyo1999.github.io/FrontEndTech/quoteAppJquery/index.html" class="btn btn-primary" target="_blank">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item d-flex justify-content-evenly align-items-center">
+
+                        </div>
+                        <div class="carousel-item d-flex justify-content-evenly align-items-center">
+                            
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </section>
+            <!--Experience Section-->
+            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
