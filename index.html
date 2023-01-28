@@ -1,86 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Alejandro Arroyo</title>
-        <meta name="description" content="Alejandro's Personal Portfolio">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="image.png" type="image/x-icon">
-        <link href="styles.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    </head>
-    <body>
-        <!--Main page section-->
-        <div class="d-flex justify-content-evenly align-items-center container-fluid" style="position: relative;" id="page">
-            <!--Navegation offcanvas sidebar-->
-            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop" style="position: absolute; top: 10px; right: 10px; width: 75px;">
-                <img class="img-fluid float-start rounded-circle" src="image.png"alt="logo">
-            </button>
 
-            <div class="offcanvas offcanvas-end" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                <div class="offcanvas-header">
-                    <img class="img-fluid rounded-circle" src="image.png" alt="logo" style="width: 75px; margin-right: 10px;">
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a class="nav-link" href="#welcome">Welcome</a></li>
-                        <li class="list-group-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="list-group-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="list-group-item"><a class="nav-link" href="#experience">Experience</a></li>
-                        <li class="list-group-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alejandro Arroyo</title>
+  <meta name="description" content="Alejandro's Personal Portfolio">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!--Main section-->
+  <div class="d-flex justify-content-evenly align-items-center container-fluid flex-column" style="position: relative;"
+    id="page">
+
+    <!--Home Button-->
+    <a id="home" class="btn shadow-none" type="button" style="position: fixed; top: 10px; right: 10px; width: 75px;"
+      href="#welcome">
+      <img class="img-fluid float-start rounded-circle" src="image.png" alt="logo">
+    </a>
+
+    <!--Welcome Section-->
+    <section class="container-fluid d-flex justify-content-evenly align-items-center" id="welcome"
+      style="width: min(90%, 600px)">
+      <h1 class="typewriter" style="max-width: fit-content; font-size: min(6vw, 50px);">I'm <a href="#about"
+          class="btn btn-light shadow-none" style="font-size: min(7vw, 60px);">Alejandro</a></h1>
+    </section>
+
+    <!--About Section-->
+    <section class="container-fluid d-flex justify-content-center align-items-center" id="about">
+      <div id="text">
+        <h3 style="margin: 3vw; font-size: min(5vw, 30px);">I'm a <a class="btn btn-light shadow-none"
+            style="font-size: min(5vw, 30px);" href="#projects">software engineer</a></h3>
+        <div style="width: calc(100% - 6vw); background-color: white; height: 1px; margin: 3vw;"></div>
+        <p style="margin: 3vw; font-size: min(3vw, 15px);">Electric engineer, on my way to becoming a fully fledged
+          Software Engineer, passionate about solving computer science problems. Interested in AI, machine-learning and
+          full-stack web and app development.</p>
+      </div>
+      <div id="profile-picture">
+        <img class="img-fluid rounded-circle" alt="Profile picture" src="cara.JPG">
+      </div>
+    </section>
+
+    <!--Projects Section-->
+    <section class="container-fluid d-flex justify-content-center align-items-center flex-column" id="projects">
+      <h1 style="margin: 50px">Projects</h1>
+      <button type="button" class="btn btn-light shadow-none" data-bs-toggle="modal" data-bs-target="#frontEnd"
+        style="width: 80vw">
+        Front End
+      </button>
+      <div class="modal fade" id="frontEnd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 style="color: black">Front End Projects</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <!--Welcome section-->
-            <section class="justify-content-evenly align-items-center" id="welcome">
-                <h1 class="typewriter">I'm <a href="#about" class="btn btn-light" style="font-size: 32pt;">Alejandro</a></h1>
-            </section>
-            <!--About section-->
-            <section class="justify-content-evenly align-items-center" id="about">
-                <div id="text">
-                    <h3 style="margin: 3vw">I'm a <span id="roles" class="btn btn-light" style="font-size: 22pt;">software engineer</span></h3>
-                    <p style="margin: 3vw">Electric engineer, on my way to becoming a fully fledged Software Engineer, passionate about solving computer science problems. Interested in AI, machine-learning and full-stack web and app development.</p>
+            <div class="d-flex justify-content-evenly align-items-center flex-wrap">
+              <div class="card">
+                <a href="https://codepen.io/AlejandroArroyo1999/full/PoBowxX" target="_blank"><img src="quoteApp.png"
+                    class="card-img-top" alt="Random quote generator"></a>
+                <div class="card-body d-flex justify-content-evenly align-items-center">
+                  <h5 class="card-title" style="color: black">Random Quote</h5>
                 </div>
-                <div id="profile-picture">
-                    <img class="img-fluid rounded-circle" alt="Profile picture" src="cara.JPG">
+              </div>
+              <div class="card">
+                <a href="https://codepen.io/AlejandroArroyo1999/full/OJENeNb" target="_blank"><img
+                    src="reactMarkdown.png" class="card-img-top" alt="React Markdown"></a>
+                <div class="card-body d-flex justify-content-evenly align-items-center">
+                  <h5 class="card-title" style="color: black">React Markdown</h5>
                 </div>
-            </section>
-            <!--Projects Section-->
-            <section class="justify-content-evenly align-items-center flex-column" id="projects">
-                <h1 style="margin: 50px">Projects</h1>
-                <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active d-flex justify-content-evenly align-items-center">
-                            <div class="card" style="width: 18rem;">
-                                <img src="quoteApp.png" class="card-img-top" alt="Random quote generator">
-                                <div class="card-body" style="color: gray">
-                                    <h5 class="card-title">Random quote generator</h5>
-                                    <a href="https://alejandroarroyo1999.github.io/FrontEndTech/quoteAppJquery/index.html" class="btn btn-primary" target="_blank">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item d-flex justify-content-evenly align-items-center">
-
-                        </div>
-                        <div class="carousel-item d-flex justify-content-evenly align-items-center">
-                            
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
+              </div>
+              <div class="card">
+                <a href="https://codepen.io/AlejandroArroyo1999/full/zYaEJbZ" target="_blank"><img src="calculator.png"
+                    class="card-img-top" alt="Calculator"></a>
+                <div class="card-body d-flex justify-content-evenly align-items-center">
+                  <h5 class="card-title" style="color: black">Calculator</h5>
                 </div>
-            </section>
-            <!--Experience Section-->
-            
+              </div>
+              <div class="card">
+                <a href="https://codepen.io/AlejandroArroyo1999/full/JjZoXLX" target="_blank"><img src="drum.png"
+                    class="card-img-top" alt="Drum machine"></a>
+                <div class="card-body d-flex justify-content-evenly align-items-center">
+                  <h5 class="card-title" style="color: black">Drum machine</h5>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-    </body>
+      </div>
+      <a class="btn btn-dark shadow-none" style="width: 80vw; color: white" href="#experience">
+        Experience
+      </a>
+    </section>
+
+    <!--Experience Section-->
+    <section class="container-fluid d-flex justify-content-center align-items-center flex-column" id="experience">
+      <h1 style="margin: 50px">Experience && Education</h1>
+      <div style="height: 2px; width: 80vw; background-color: white;"></div>
+      <div id="timeline" class="d-flex align-items-start" style="width: 80vw; overflow-x: scroll">
+        <div class="d-flex align-items-center flex-column"
+          style="background-color: black; margin-left: auto; margin-right: auto; padding: 20px; min-width: 400px; width: 400px">
+          <h2 id="IBMHeading">
+            <a class="btn shadow-none" role="button" data-bs-toggle="collapse" href="#IBMContent" aria-expanded="true"
+              aria-controls="IBMCollapsable">
+              <div>
+                <strong>2021, September</strong>
+                <br />
+                <strong>Present</strong>
+              </div>
+              <img class="img-fluid rounded-circle"
+                src="https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg"
+                alt="IBM"
+                style="max-width: 100px; width: 20vw; max-height: 100px; height: 20vw; object-fit: cover; margin: 20px;" />
+            </a>
+          </h2>
+          <div id="IBMContent" class="collapse" aria-labelledby="IBMHeading"
+            style="width: 100%; font-size: min(3vw, 16px);">
+            Technological consultant, focused on the transformation of various services from different clients onto the
+            cloud and on the implementation and development of applications based on microservices and container
+            architecture.
+          </div>
+        </div>
+        <div class="d-flex align-items-center flex-column"
+          style="background-color: black; margin-left: auto; margin-right: auto; padding: 20px; min-width: min(100%, 400px); width: 400px;">
+          <h2 id="UnavHeading">
+            <a class="btn shadow-none" role="button" data-bs-toggle="collapse" href="#UnavCollapsable"
+              aria-expanded="true" aria-controls="UnavCollapsable">
+              <div>
+                <strong>2017, September</strong>
+                <br />
+                <strong>2021, July</strong>
+              </div>
+              <img class="img-fluid rounded-circle"
+                src="https://media.licdn.com/dms/image/C4E0BAQFsTIhqYeC6oA/company-logo_200_200/0/1591391847067?e=1681948800&v=beta&t=480bVnNt_8xORLsiijppfyOLazcGI1h6FaRDUlKk9oA"
+                alt="UNAV"
+                style="max-width: 100px; width: 20vw; max-height: 100px; height: 20vw; object-fit: cover; margin: 20px;" />
+            </a>
+          </h2>
+          <div id="UnavCollapsable" class="collapse" aria-labelledby="UnavHeading"
+            style="width: 100%; font-size: min(3vw, 16px);">
+            Degree in Industrial Engineering, with a focus in the electronic and automation areas in the design of
+            various systems. The main fields studied were Microprocessor Programming, Automatic Systems and Robotics,
+            with hardware analysis, manipulation and programming logic.
+          </div>
+        </div>
+        <div class="d-flex align-items-center flex-column"
+          style="min-width: min(100%, 400px); width: 400px; background-color: black; margin-left: auto; margin-right: auto; padding: 20px">
+          <h2 id="CeitHeading">
+            <a class="btn shadow-none" rolw="button" data-bs-toggle="collapse" href="#CeitCollapsable"
+              aria-expanded="true" aria-controls="CeitCollapsable">
+              <div>
+                <strong>2020, January</strong>
+                <br />
+                <strong>2020, June</strong>
+              </div>
+              <img class="img-fluid rounded-circle"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa1lI-T--u43h8W89Jg2_-Kjf5M4ioK8kb3VQqQAkXzQ&s"
+                alt="CEIT"
+                style="max-width: 100px; width: 20vw; max-height: 100px; height: 20vw; object-fit: cover; margin: 20px;" />
+            </a>
+          </h2>
+          <div id="CeitCollapsable" class="collapse" aria-labelledby="CeitHeading"
+            style="width: 100%; font-size: min(3vw, 16px);">
+            Research assistant, working with the head of the department of Electronics of CEIT, Leticia Zamora, in
+            investigation concerning Ultra-Wide Band (UWB) technology and positioning systems.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Experience Section-->
+    <section class="container-fluid d-flex justify-content-center align-items-center flex-column" id="contact">
+      <h1 style="margin: 50px">Contact</h1>
+      <div id="sites" class="d-flex justify-content-evenly align-items-center" style="width: 80vw; height: 200px">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alejandroarroyo1999@gmail.com" target=”_blank”><img
+            class="img-fluid rounded-3"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxWPbp1Pr7Wj82E99k0BBdOsqcA0d7fRCjhXi7zIm_4E8otf-5P80sNbROp4_C4oGhEa0&usqp=CAU"
+            style="max-width: 100px; max-height: 100px; width: 20vw; height: 20vw" /></a>
+        <a href="https://www.linkedin.com/in/alejandro-arroyo-nieto-b0194b195/" target=”_blank”><img
+            class="img-fluid rounded-3" src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+            style="max-width: 100px; max-height: 100px; width: 20vw; height: 20vw" /></a>
+        <a href="https://github.com/AlejandroArroyo1999" target=”_blank”><img class="img-fluid rounded-3"
+            src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
+            style="max-width: 100px; max-height: 100px; width: 20vw; height: 20vw" /></a>
+      </div>
+    </section>
+
+  </div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js'></script>
+</body>
+
 </html>

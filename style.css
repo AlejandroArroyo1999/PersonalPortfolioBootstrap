@@ -1,0 +1,107 @@
+* {
+  font-family: Courier New;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+body {
+  background-color: black;
+}
+
+section {
+  min-height: 100vh;
+}
+
+#about {
+  gap: 20px;
+}
+
+#text {
+  width: 60vw;
+  max-width: 700px;
+}
+
+#profile-picture {
+  width: 20%;
+  min-width: 100px;
+}
+
+.card {
+  width: 200px;
+  height: 17rem;
+  margin: 20px;
+}
+.card h5 {
+  font-size: 100%;
+}
+.card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.title {
+  background-color: white;
+  color: black;
+}
+
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  animation: typing 2.5s steps(20, end), blink-caret 0.55s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@media (max-width: 800px) {
+  #text {
+    width: 100%;
+  }
+
+  #profile-picture {
+    width: 30%;
+    max-width: 200px;
+    min-width: 150px;
+  }
+
+  #about {
+    flex-direction: column;
+  }
+}
